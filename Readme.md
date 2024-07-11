@@ -1,3 +1,4 @@
+Download files in releases tab.
 
 Made for JC8048W550C_I 5 Inch
 Aliexpress: https://www.aliexpress.com/item/1005006715794302.html?spm=a2g0o.order_list.order_list_main.10.21ef1802IEZxBN
