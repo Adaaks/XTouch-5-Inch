@@ -1,5 +1,7 @@
 
-Install visual studio code, then install platformio extension, once that's done, you can build the firmware, which is on the bottom left small icon, then plug in your screen using a usb c data cable, then you can press upload whilst holding the BOOT button on the screen board, you can let go after it starts writing the firmware. 
+# Instructions
+- Install visual studio code, then install platformio extension, once that's done, you can build the firmware, which is on the bottom left small icon, then plug in your screen using a usb c data cable, then you can press upload whilst holding the BOOT button on the screen board, you can let go after it starts writing the firmware.
+- Make sure you inserted a !FAT32! MICRO SD CARD, with the config.json stored inside, which you can make through this website = https://xperiments.in/xtouch-bin/config.html
 
 # There are two folders
 - A1 Series = removes chamber temp, aux fan from the menus
