@@ -1,5 +1,10 @@
-# If the screen reboots constantly after connecting to bambu lab server, you will need to follow this process to manually add the printer, credits to WolfspiritM for this guide.
 
+# There are two folders
+- A1 Series = removes chamber temp, aux fan from the menus
+- P1/X1 Series = keep chamber temp, aux fan from the menus.
+
+  
+# ⚠️ If the screen reboots constantly after connecting to bambu lab server, you will need to follow this process to manually add the printer, credits to WolfspiritM for this guide.
 
 
 # Manually pair the printer with xtouch
