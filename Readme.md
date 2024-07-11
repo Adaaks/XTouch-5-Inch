@@ -9,6 +9,7 @@ Aliexpress: https://www.aliexpress.com/item/1005006715794302.html?spm=a2g0o.orde
 # There are two folders
 - A1 Series = removes chamber temp, aux fan from the menus
 - P1/X1 Series = keep chamber temp, aux fan from the menus.
+Choose only one folder to install corresponding to your needs
 
   
 # ⚠️ If the screen reboots constantly after connecting to bambu lab server, you will need to follow this process to manually add the printer, credits to WolfspiritM for this guide.
