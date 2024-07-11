@@ -8,8 +8,8 @@ Aliexpress: https://www.aliexpress.com/item/1005006715794302.html?spm=a2g0o.orde
 - Make sure you inserted a !FAT32! MICRO SD CARD, with the config.json stored inside, which you can make through this website = https://xperiments.in/xtouch-bin/config.html
 
 # There are two folders
-- A1 Series = removes chamber temp, aux fan from the menus
-- P1/X1 Series = keep chamber temp, aux fan from the menus.
+- A1 Series = removes chamber temp, aux fan from the menus, fixed xyz controls
+- P1/X1 Series = remove chamber temp, keep aux fan
 - Choose only one folder to install corresponding to your needs
 
   
