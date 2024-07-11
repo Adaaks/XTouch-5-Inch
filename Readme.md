@@ -1,3 +1,87 @@
+# If the screen reboots constantly after connecting to bambu lab server, you will need to follow this process to manually add the printer, credits to WolfspiritM for this guide.
+
+
+
+# Manually pair the printer with xtouch
+
+To manual pair the printer with xtouch, it is essential to generate the necessary files on the SD card, all of which must be created within the designated "xtouch" folder.
+
+## Preparation
+### Getting the IP
+1. Obtain the printer's IP address from your router (usually the printers appear as "espressif" (at least for p1p/p1s)).
+2. Ensure that the DHCP server consistently assigns the same fixed IP address to the printer.
+
+### Getting the required data
+Begin by logging into:
+https://bambulab.com
+
+Then access the following page:
+https://bambulab.com/api/v1/iot-service/api/user/bind
+
+It contains all the required informations (even the access code) for your printer.
+For each printer there is an entry that looks similar to this (depending on the browser it might be displayed differently):
+```json
+        {
+            "dev_id": "01P123456712345",
+            "name": "PRINTER-001",
+            "online": true,
+            "print_status": "ACTIVE",
+            "dev_model_name": "C12",
+            "dev_product_name": "P1S",
+            "dev_access_code": "12345678",
+            "nozzle_diameter": 0.4
+        }
+```
+
+Replace the placeholders in the following files with the correct values from this object (every value with < and > is a placeholder) except for "PRINTER_IP" which is the printers ip obtained from your router.
+For example with the object above: ```{"<dev_id>": { "usn": "<dev_id>" }}```will needs to be changed to ```{"01P123456712345": { "usn": "01P123456712345" }}```
+
+## Files
+
+Here are the templates for the files (and an example based on the example return value.
+### xtouch/printer.json
+```json
+{"<dev_id>":{"usn":"<dev_id>","model":"<dev_model_name>","name":"<name>","lanMode":"cloud","bind":"occupied"}}
+```
+
+Example:
+```json
+{"01P123456712345":{"usn":"01P123456712345","model":"C12","name":"PRINTER-001","lanMode":"cloud","bind":"occupied"}}
+```
+
+
+### xtouch/printer-pair.json
+```json
+{"paired":"<dev_id>","<dev_id>":"<dev_access_code>"}
+```
+
+Example:
+```json
+{"paired":"01P123456712345","01P123456712345":"12345678"}
+```
+
+
+### xtouch/printer-ips.json
+```json
+{"<dev_id>":"<PRINTER_IP>"}
+```
+
+Example:
+```json
+{"01P123456712345":"192.168.178.42"}
+```
+
+
+## Good to know
+If xtouch fails to connect to the printer it will overwrite the printer.json and printer-pair.json file.  
+This is done to make sure a connection can be established if the printer changed ip.  
+That means:  
+- Make sure to start the printer before starting xtouch.  
+  If you start xtouch together with your printer you can set a higher "coldboot" value in the "wifi.json" file (see the main README.md for more informations) to make sure the printer is ready before xtouch tries to connect.
+- You can try making both files read-only which might cause hard reboots if the printer isn't running, but maybe prevents the files from being overwritten. (untested)  
+
+
+
 # ![image](readme-assets/xtouch.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I8PSAYU)
