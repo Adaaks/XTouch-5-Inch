@@ -1,4 +1,6 @@
 
+Install visual studio code, then install platformio extension, once that's done, you can build the firmware, which is on the bottom left small icon, then plug in your screen using a usb c data cable, then you can press upload whilst holding the BOOT button on the screen board, you can let go after it starts writing the firmware. 
+
 # There are two folders
 - A1 Series = removes chamber temp, aux fan from the menus
 - P1/X1 Series = keep chamber temp, aux fan from the menus.
