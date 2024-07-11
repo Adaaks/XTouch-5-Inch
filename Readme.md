@@ -1,4 +1,7 @@
 
+Made for JC8048W550C_I 5 Inch
+Aliexpress: https://www.aliexpress.com/item/1005006715794302.html?spm=a2g0o.order_list.order_list_main.10.21ef1802IEZxBN
+
 # Instructions
 - Install visual studio code, then install platformio extension, once that's done, you can build the firmware, which is on the bottom left small icon, then plug in your screen using a usb c data cable, then you can press upload whilst holding the BOOT button on the screen board, you can let go after it starts writing the firmware.
 - Make sure you inserted a !FAT32! MICRO SD CARD, with the config.json stored inside, which you can make through this website = https://xperiments.in/xtouch-bin/config.html
