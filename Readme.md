@@ -20,6 +20,9 @@ Aliexpress: https://www.aliexpress.com/item/1005006715794302.html?spm=a2g0o.orde
 
 To manual pair the printer with xtouch, it is essential to generate the necessary files on the SD card, all of which must be created within the designated "xtouch" folder.
 
+# If you wish to make the files faster, I've made a website to generate these files:
+https://adaksxtouch.netlify.app/
+
 ## Preparation
 ### Getting the IP
 1. Obtain the printer's IP address from your router (usually the printers appear as "espressif" (at least for p1p/p1s)).
